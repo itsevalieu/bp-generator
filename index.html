@@ -22,16 +22,26 @@
 	</nav>
 	<main>
 		<div>
-			<h2>Title</h2>
-			<img src="#" alt="drink"/>
-			<p>Drink Description</p>
+			<h1>Bird Pick Tea Roulette</h1>
+			<p>Having a hard time trying to decide what to drink? <br/> Easy peasy, click the button to randomly generate a tea drink!</p>
+			<br/>
+			<button id="click">DRINK ROULETTE</button>
 		</div>
-		<div>
-			<button>RANDOM DRINK</button>
+		<div id="random-drink">
+			
 		</div>
 	</main>
 	<footer>
 		<p>2017 Eva Lieu</p>
 	</footer>
 </body>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<script>
+	$(document).ready( function(){
+		$("#click").click(function(){
+			$("#random-drink").append("cat");
+		});
+	});
+
+</script>
 </html>
