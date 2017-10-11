@@ -39,7 +39,8 @@
 <script>
 	$(document).ready( function(){
 		$("#click").click(function(){
-			$("#random-drink").append("cat");
+			var random = Math.floor(Math.random() * 1000) + 1;  
+			$("#random-drink").html(random);
 		});
 	});
 
