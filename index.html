@@ -28,7 +28,7 @@
 			<button id="click">DRINK ROULETTE</button>
 		</div>
 		<div id="random-drink">
-			
+			<p id="name"></p>
 		</div>
 	</main>
 	<footer>
@@ -39,8 +39,25 @@
 <script>
 	$(document).ready( function(){
 		$("#click").click(function(){
-			var random = Math.floor(Math.random() * 1000) + 1;  
-			$("#random-drink").html(random);
+			var tropicals = {
+				name: "Tropical Sunrise",
+				description: "White tea base with muddled oranges, lemons, and mint"  
+			};
+			var lycheeo = {
+				name: "Lychee Oolong",
+				description: "Oolong tea base with lychee puree and fruit"  
+			};
+			var jasminel = {
+				name: "Jasmine Lemonade",
+				description: "Green tea base with muddled lemons"  
+			};
+			var menu = [tropicals, lycheeo, jasminel];
+
+			var random = Math.floor(Math.random() * menu.length);  
+			$("#random-drink").html(function(){
+				console.log(menu[random]);
+				$("#name").html(menu[random].name);
+			});
 		});
 	});
 
