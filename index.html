@@ -30,6 +30,7 @@
 		<div id="random-drink">
 			<p id="name"></p>
 			<p id="description"></p>
+			<img id="drink-image" src="#" alt="#"/>
 		</div>
 	</main>
 	<footer>
@@ -42,31 +43,44 @@
 		$("#click").click(function(){
 			var tropicals = {
 				name: "Tropical Sunrise",
-				description: "White tea base with muddled oranges, lemons, and mint"  
+				description: "White tea base with muddled oranges, lemons, and mint",
+				image: ["", "Tropical Sunrise Image"]
 			};
 			var lycheeo = {
 				name: "Lychee Oolong",
-				description: "Oolong tea base with lychee puree and fruit"  
+				description: "Oolong tea base with lychee puree and fruit",
+				image: "",
+				imageAlt: ""
 			};
 			var jasminel = {
 				name: "Jasmine Lemonade",
-				description: "Green tea base with muddled lemons"  
+				description: "Green tea base with muddled lemons",
+				image: "",
+				imageAlt: ""
 			};
 			var mintm = {
 				name: "Mint Moji-Tea",
-				description: "Green tea base with muddled mint"  
+				description: "Green tea base with muddled mint",
+				image: "",
+				imageAlt: ""
 			};
 			var jasmineo= {
 				name: "Jasmine OJ",
-				description: "Green tea base with freshly squeezed orange juice"  
+				description: "Green tea base with freshly squeezed orange juice",
+				image: "",
+				imageAlt: ""
 			};
 			var passionfb = {
 				name: "Passionfruit Black",
-				description: "Black tea base with muddled oranges and passionfruit"  
+				description: "Black tea base with muddled oranges and passionfruit",
+				image: "",
+				imageAlt: ""
 			};
+
 			var menu = [tropicals, lycheeo, jasminel, mintm, jasmineo, passionfb];
 
 			var random = Math.floor(Math.random() * menu.length);  
+
 			$("#random-drink").html(function(){
 				console.log(menu[random]);
 				$("#name").html(menu[random].name);
